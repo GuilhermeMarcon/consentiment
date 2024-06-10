@@ -8,6 +8,7 @@ ConSentiment is a Python library for Aspect-Based Sentiment Analysis (ABSA) that
 
 ## Installation
 To install ConSentiment, you can use pip.
+
 `pip install consentiment`
 
 ## Usage
@@ -15,6 +16,7 @@ Check the Committee-Graph Python Notebook in the examples folder.
 
 ## Methods Reference
 `consentiment.create_graph_from_df(df: pd.DataFrame, text: str = 'text', ignore_model: List[str] = None, embedding_mi: float = 0.9, distance_threshold: float = 0.1, verbose: bool = True)`
+
 Creates a consensus graph from a DataFrame.
 - df: DataFrame containing the sentiment predictions.
 - text: Column name for the review text.
@@ -24,11 +26,13 @@ Creates a consensus graph from a DataFrame.
 - verbose: If True, prints progress information.
 
 `consentiment.eval.evaluate(spans: pd.DataFrame, true_column: str = "annotation")`
+
 Evaluates sentiment predictions through Nervaluate.
 - spans: DataFrame with span annotations.
 - true_column: Column name for true annotations.
 
 `consentiment.eval.metrics_to_df(metrics: dict, eval_type: str = 'strict')`
+
 Converts evaluation metrics to a DataFrame.
 - metrics: Dictionary containing evaluation metrics.
 - eval_type: Type of evaluation ('strict' or 'partial').
