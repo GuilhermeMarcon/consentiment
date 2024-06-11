@@ -8,7 +8,7 @@ from transformers import BertTokenizer, BertModel
 def read_df(filename:str, clean_empty:bool=True, verbose:bool=True):
     if(verbose): print("Reading", filename)
     df = pd.read_excel(filename)
-    if(clean_empty and verbse): print("Original size", len(df))
+    if(clean_empty and verbose): print("Original size", len(df))
     for col in df.columns[1:]:
         df[col] = df[col].apply(literal_eval)
         if(clean_empty): df = df[df[col].apply(len) != 0]
